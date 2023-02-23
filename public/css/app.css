@@ -1,10 +1,10 @@
 body {
-    background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    background: rgb(27,77,62);
+    background: linear-gradient(0deg, rgba(27,77,62,1) 0%, rgba(172,225,175,1) 95%);
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-    color: #EEE;
+    color: #293133;
     font-family: 'Mynerve', cursive;
 }
 
@@ -60,7 +60,7 @@ header{
 }
 
 header img {
-    height: 70px;
+    height: 140px;
 }
 
 .titreLogo{
@@ -75,6 +75,7 @@ main {
 
 nav ul {
     display: flex;
+    justify-content: center;
     list-style: none;
     padding-left: 30px;
     color: black;
@@ -88,7 +89,6 @@ nav li {
 h1{
     text-align: center;
     font-size: 3em;
-    color: black;
 }
 
 h2{
