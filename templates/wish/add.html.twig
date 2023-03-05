@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ parent()}} | Add {% endblock %}
+
+{% block body %}
+
+    <h2>Add List !</h2>
+
+    {# déclenche l'affichage du formulaire #}
+    {#   {{ form(serieForm) }}#}
+
+    {# début du form #}
+    {{ form_start(wishForm) }}
+
+    <div class="">
+        {{ form_errors(wishForm.title) }}
+        {{ form_label(wishForm.title) }}
+        {{ form_widget(wishForm.title) }}
+    </div>
+
+    <div>
+        {{ form_errors(wishForm.description) }}
+        {{ form_label(wishForm.description) }}
+        {{ form_widget(wishForm.description) }}
+    </div>
+
+    <div>
+        {{ form_errors(wishForm.author) }}
+        {{ form_label(wishForm.author) }}
+        {{ form_widget(wishForm.author) }}
+    </div>
+
+    <div>
+        {{ form_errors(wishForm.category) }}
+        {{ form_label(wishForm.category) }}
+        {{ form_widget(wishForm.category) }}
+    </div>
+
+    <button>Add wish !</button>
+
+    {# fin du formulaire #}
+    {{ form_end(wishForm) }}
+
+
+{% endblock %}
+

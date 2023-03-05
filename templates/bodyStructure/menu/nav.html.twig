@@ -3,5 +3,12 @@
         <li><a href="{{ path('main_home') }}">Home</a></li>
         <li><a href="{{ path('main_about_us') }}">About Us</a></li>
         <li><a href="{{ path('wish_list') }}">Wish List</a></li>
+        {% if app.user %}
+            <li><a href="{{ path('wish_add') }}">Add your idea</a></li>
+            <li><a href="{{ path('app_logout') }}">Logout ({{ app.user.userIdentifier }})</a></li>
+        {% else %}
+            <li><a href="{{ path('app_login') }}">Login</a></li>
+            <li><a href="{{ path('app_register') }}">Register</a></li>
+        {% endif %}
     </ul>
 </nav>

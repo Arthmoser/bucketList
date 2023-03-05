@@ -3,10 +3,27 @@
 {% block title %} {{ parent()}} | Detail {% endblock %}
 
 {% block body %}
-    <h2>{{ wish }} Detail</h2>
 
+    <h2>{{ wish.title }}</h2>
 
+    <a href="{{ path('wish_update', {'id': wish.id}) }}"><button>Update</button></a>
 
+    <table>
+        <tbody>
+            <tr>
+                <td>Description : </td>
+                <td>{{ wish.description }}</td>
+            </tr>
+            <tr>
+                <td>Author : </td>
+                <td>{{ wish.author }}</td>
+            </tr>
+            <tr>
+                <td>Date de création : </td>
+                <td>{{ wish.dateCreated |date('y-m-d | H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
 
 {% endblock %}
 
